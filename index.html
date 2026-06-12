@@ -51,6 +51,34 @@
     .project-links a {
       margin-right: 0.85rem;
     }
+
+    .award-list {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .award-entry {
+      padding: 1.1rem 1.25rem;
+      border-left: 4px solid var(--accent-color, #c46f4a);
+    }
+
+    .award-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .award-org {
+      font-size: 0.98rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .award-note {
+      font-size: 0.92rem;
+      opacity: 0.78;
+      line-height: 1.55;
+    }
   </style>
 </head>
 
@@ -244,13 +272,20 @@
         <h2 class="section-title">Awards</h2>
 
         <div class="section-body">
-          <div class="card">
-            <p>
-              <strong>Third Prize</strong>,
-              Xi'an Jiaotong-Liverpool University Biostatistics Competition.
-              The competition used a unified division in which undergraduate and
-              master's students were evaluated together.
-            </p>
+          <div class="award-list">
+            <div class="card award-entry">
+              <div class="award-title">
+                Third Prize
+              </div>
+
+              <div class="award-org">
+                Xi'an Jiaotong-Liverpool University Biostatistics Competition
+              </div>
+
+              <div class="award-note">
+                Unified division for undergraduate and master's students.
+              </div>
+            </div>
           </div>
         </div>
       </div>
