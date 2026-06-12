@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Ziyu Peng - Homepage</title>
-  <meta name="description" content="Personal academic homepage of Ziyu Peng, an undergraduate student in Statistics at the University of Colorado Boulder.">
-  <meta name="keywords" content="Ziyu Peng, University of Colorado Boulder, statistics, data science, machine learning, artificial intelligence, multimodal AI, computational neuroscience">
+
+  <meta name="description" content="Personal academic homepage of Ziyu Peng, an undergraduate student in Statistics and Data Science at the University of Colorado Boulder.">
+  <meta name="keywords" content="Ziyu Peng, University of Colorado Boulder, Statistics and Data Science, statistics, data science, machine learning, artificial intelligence, chart question answering, multimodal AI, computational neuroscience">
+
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +22,36 @@
 
   <link rel="stylesheet" href="assets/css/font_sans_serif.css">
   <link rel="stylesheet" href="assets/css/theme-luka.css">
+
+  <style>
+    .avatar img {
+      object-fit: cover;
+    }
+
+    .institution-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 4px;
+    }
+
+    .project-card p {
+      margin-top: 0.65rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .project-tags {
+      margin-top: 0.75rem;
+      font-size: 0.92rem;
+      opacity: 0.85;
+    }
+
+    .project-links a {
+      margin-right: 0.85rem;
+    }
+  </style>
 </head>
 
 <body class="theme-luka">
@@ -47,7 +79,8 @@
         <h1 class="site-name">Ziyu Peng</h1>
 
         <p class="site-email">
-          Undergraduate Student in Statistics<br>
+          Undergraduate Student<br>
+          Statistics and Data Science<br>
           University of Colorado Boulder<br>
           <a href="mailto:Ziyu.PengSr@colorado.edu">Ziyu.PengSr@colorado.edu</a>
         </p>
@@ -61,8 +94,8 @@
             <i class="fa-brands fa-github"></i>
           </a>
 
-          <a href="https://openreview.net/forum?id=HGwCScxgE6" title="OpenReview" target="_blank" rel="noopener">
-            <i class="ai ai-open-access"></i>
+          <a href="https://openreview.net/forum?id=HGwCScxgE6" title="OpenReview project" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-lines"></i>
           </a>
         </div>
       </div>
@@ -75,21 +108,21 @@
         <div class="section-body">
           <p>
             Hello! I am <strong>Ziyu Peng</strong>, an undergraduate student in
-            <strong>Statistics</strong> at the
+            <strong>Statistics and Data Science</strong> at the
             <strong>University of Colorado Boulder</strong>.
           </p>
 
           <p>
             My academic interests include statistics, data science, machine learning,
             multimodal artificial intelligence, and computational neuroscience.
-            I am especially interested in how statistical and computational methods
-            can be used to study reasoning, representation, and human cognition.
+            I am especially interested in using statistical and computational methods
+            to study reasoning, representation, and reliability in intelligent systems.
           </p>
 
           <p>
             I am currently building a strong foundation in statistics, computer science,
-            and scientific computing. In the long term, I hope to pursue research at the
-            intersection of data science, artificial intelligence, and neuroscience.
+            data analysis, and scientific computing. In the long term, I hope to pursue
+            research at the intersection of data science, artificial intelligence, and neuroscience.
           </p>
 
           <p>
@@ -107,9 +140,17 @@
               <img src="assets/img/cu-boulder-logo.png" alt="University of Colorado Boulder logo" class="institution-logo">
 
               <div class="experience-content">
-                <p class="exp-title"><strong>University of Colorado Boulder</strong></p>
-                <p class="exp-detail">Undergraduate Student in Statistics</p>
-                <p class="exp-period">2026 - Present</p>
+                <p class="exp-title">
+                  <strong>University of Colorado Boulder</strong>
+                </p>
+
+                <p class="exp-detail">
+                  Undergraduate Student in Statistics and Data Science
+                </p>
+
+                <p class="exp-period">
+                  2026 - Present
+                </p>
               </div>
             </div>
           </div>
@@ -119,9 +160,17 @@
               <img src="assets/img/Logo_XJTLU.png" alt="Xi'an Jiaotong-Liverpool University logo" class="institution-logo">
 
               <div class="experience-content">
-                <p class="exp-title"><strong>Xi'an Jiaotong-Liverpool University</strong></p>
-                <p class="exp-detail">Mathematical Sciences coursework</p>
-                <p class="exp-period">Previous Study</p>
+                <p class="exp-title">
+                  <strong>Xi'an Jiaotong-Liverpool University</strong>
+                </p>
+
+                <p class="exp-detail">
+                  Foundational undergraduate coursework
+                </p>
+
+                <p class="exp-period">
+                  2025 - 2026
+                </p>
               </div>
             </div>
           </div>
@@ -137,9 +186,9 @@
               <li>Statistics, data science, and scientific computing</li>
               <li>Machine learning and artificial intelligence</li>
               <li>Multimodal reasoning and vision-language models</li>
-              <li>Computational neuroscience and NeuroAI</li>
+              <li>Chart question answering and numerical reliability</li>
               <li>Representation analysis and model interpretability</li>
-              <li>Human-centered artificial intelligence</li>
+              <li>Computational neuroscience and NeuroAI</li>
             </ul>
           </div>
         </div>
@@ -150,14 +199,39 @@
 
         <div class="section-body">
           <div class="card project-card">
-            <strong>OpenReview Research Project</strong>
+            <strong>Scale Is Not Symmetric: Directional Scale Reliability in Chart Question Answering</strong>
 
             <p>
-              I have a research project available on OpenReview. This project reflects
-              my interest in statistics, machine learning, and AI-related research.
+              This project studies a reliability problem in chart question answering:
+              multimodal models may identify a numerically related value but report it
+              at the wrong scale, such as answering <em>0.61</em> when the chart question
+              requires <em>61</em>. The project treats this behavior as a scale-regime
+              selection failure involving chart units, axes, question wording, and answer
+              conventions, rather than as a generic numerical mistake.
             </p>
 
             <p>
+              The work investigates whether scale correction should be treated as a
+              directional and regime-dependent problem rather than as unconditional
+              numerical normalization. It analyzes scale-related failures in chart QA and
+              uses diagnostic probes including LoRA scale-contrastive adapters, prompting
+              strategies, structured verifiers, calculators, and lightweight policy selectors.
+            </p>
+
+            <p>
+              The project introduces and analyzes <strong>ScaleQA-Natural</strong>, a diagnostic
+              set of natural scale-conflict candidates. It studies when a model should keep
+              its original answer, switch to a larger-scale answer, switch to a smaller-scale
+              answer, or rely on unit and axis evidence. The main finding is that generating
+              a scaled alternative is often easier than selecting the correct scale regime.
+            </p>
+
+            <p class="project-tags">
+              <strong>Topics:</strong> chart question answering, multimodal AI, numerical reliability,
+              scale inconsistency, LoRA adapters, policy selection
+            </p>
+
+            <p class="project-links">
               <a href="https://openreview.net/forum?id=HGwCScxgE6" target="_blank" rel="noopener">
                 View on OpenReview
               </a>
@@ -181,15 +255,14 @@
         </div>
       </div>
 
-      <div class="section" id="publications">
-        <h2 class="section-title">Publications &amp; Writing</h2>
+      <div class="section" id="writing">
+        <h2 class="section-title">Manuscripts &amp; Writing</h2>
 
         <div class="section-body">
           <div class="card">
             <p>
-              No formal peer-reviewed publications are listed at the moment.
-              I will add preprints, papers, technical reports, and project pages here
-              when they become available.
+              I am interested in research writing in statistics, data science, and AI reliability.
+              I will add preprints, technical reports, and project pages here when they become available.
             </p>
           </div>
         </div>
@@ -200,9 +273,18 @@
 
         <div class="section-body">
           <div class="card">
-            <p><strong>Programming:</strong> Python, R, HTML, CSS, JavaScript</p>
-            <p><strong>Tools:</strong> Git, GitHub, LaTeX, Linux</p>
-            <p><strong>Areas:</strong> statistics, data analysis, machine learning, scientific computing, representation analysis</p>
+            <p>
+              <strong>Programming:</strong> Python, R, HTML, CSS, JavaScript
+            </p>
+
+            <p>
+              <strong>Tools:</strong> Git, GitHub, LaTeX, Linux
+            </p>
+
+            <p>
+              <strong>Areas:</strong> statistics, data analysis, machine learning,
+              scientific computing, representation analysis
+            </p>
           </div>
         </div>
       </div>
