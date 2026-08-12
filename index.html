@@ -186,21 +186,23 @@
           </p>
 
           <p>
-            My research interests center on multimodal and abstract visual reasoning,
-            uncertainty-aware inference, and reliable AI. I work on VQA routing,
-            calibration, selective prediction, object-centric representations,
-            predictive coding, and candidate comparison.
+            My primary systems interest is in how large-scale ML models are trained and
+            deployed efficiently. I am especially interested in resource-efficient LLM
+            inference, serving frameworks for agentic and multimodal AI, and scalable
+            end-to-end ML pipelines.
           </p>
 
           <p>
-            I am also interested in the systems side of conditional multimodal reasoning,
-            especially serving, scheduling, and caching, and in how ideas from human learning,
-            representation, and predictive processing can inform artificial intelligence.
+            My current work on VQA routing and uncertainty-preserving visual reasoning provides
+            concrete workloads for these questions: different inputs may trigger different stages,
+            reuse intermediate context, or require additional candidate comparison. This motivates
+            problems in routing, scheduling, caching, and reliable serving.
           </p>
 
           <p>
-            I am open to research assistant opportunities in multimodal reasoning,
-            reliable AI, and efficient ML inference.
+            I am seeking undergraduate research opportunities in ML systems, particularly
+            resource-efficient LLM inference, end-to-end ML pipelines, and serving for
+            agentic or multimodal workloads.
           </p>
 
           <p>
@@ -263,17 +265,18 @@
           <div class="card">
             <ul>
               <li>
-                <strong>Reliable multimodal reasoning.</strong>
-                I study how models identify referents, maintain structured visual representations, compare candidate
-                answers, and decide when to answer, clarify, or abstain. I use VQA, ChartQA, and abstract visual
-                reasoning to investigate uncertainty, calibration, selective prediction, and computational ideas
-                from predictive processing and human learning.
+                <strong>Efficient AI systems.</strong>
+                I am interested in systems for training and deploying large-scale ML models, especially
+                resource-efficient LLM training and inference, serving frameworks for agentic and multimodal AI,
+                and scalable end-to-end ML pipelines. My routing and fusion work motivates systems questions around
+                conditional execution, dynamic resource demands, scheduling, caching, and reuse of intermediate context.
               </li>
               <li>
-                <strong>Efficient AI inference systems.</strong>
-                I am interested in how routing, scheduling, caching, and context management can make conditional
-                multimodal and agentic pipelines more efficient and reliable, especially when inference unfolds
-                over multiple stages and intermediate context grows.
+                <strong>Reliable multimodal reasoning.</strong>
+                I study how models identify referents, maintain structured visual representations, compare candidate
+                answers, and decide when to answer, clarify, or abstain. VQA, ChartQA, and abstract visual reasoning
+                provide concrete workloads for understanding how uncertainty, variable computation, and intermediate
+                representations should shape reliable AI systems.
               </li>
             </ul>
           </div>
@@ -300,6 +303,13 @@
               versus <strong>0/22</strong> for answer self-consistency.
             </p>
 
+            <p>
+              From a systems perspective, the router creates variable execution paths:
+              some requests can answer immediately, while others trigger referent enumeration
+              or clarification. I am interested in how such workloads should be batched,
+              scheduled, and served efficiently.
+            </p>
+
             <p class="project-tags">
               <strong>Topics:</strong> VQA, conditional multimodal inference, selective prediction, calibration
             </p>
@@ -324,6 +334,12 @@
               On public RAVEN, the inference ladder improved macro accuracy from
               <strong>0.537 to 0.857</strong>. Controlled experiments separated
               object-formation failures from residual and candidate-selection failures.
+            </p>
+
+            <p>
+              The staged preservation and comparison of object-file posteriors also raises
+              systems questions about caching intermediate representations, coordinating
+              candidate evaluation, and managing resource use across inference stages.
             </p>
 
             <p class="project-tags">
