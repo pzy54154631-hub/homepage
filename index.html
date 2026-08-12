@@ -41,6 +41,12 @@
       margin-bottom: 0.65rem;
     }
 
+    .project-card + .project-card {
+      margin-top: 2.4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--luka-border);
+    }
+
     .project-tags {
       margin-top: 0.75rem;
       font-size: 0.92rem;
@@ -257,45 +263,58 @@
       </div>
 
       <div class="section" id="projects">
-        <h2 class="section-title">Project</h2>
+        <h2 class="section-title">Projects</h2>
 
         <div class="section-body">
           <div class="card project-card">
-            <strong>Scale Is Not Symmetric: Directional Scale Reliability in Chart Question Answering</strong>
+            <strong>Ambiguity Is Not One Scalar: Explicit Referents Improve VQA Routing</strong>
 
             <p>
-              This project studies a reliability problem in chart question answering:
-              multimodal models may identify a numerically related value but report it
-              at the wrong scale, such as answering <em>0.61</em> when the chart question
-              requires <em>61</em>. The project treats this behavior as a scale-regime
-              selection failure involving chart units, axes, question wording, and answer
-              conventions, rather than as a generic numerical mistake.
+              This project develops a two-stage VQA router over
+              <strong>ANSWER / CLARIFY / ABSTAIN</strong>. For uncertain or focus-sensitive
+              inputs, it explicitly enumerates plausible referents instead of treating
+              ambiguity as a single confidence score.
             </p>
 
             <p>
-              The work investigates whether scale correction should be treated as a
-              directional and regime-dependent problem rather than as unconditional
-              numerical normalization. It analyzes scale-related failures in chart QA and
-              uses diagnostic probes including LoRA scale-contrastive adapters, prompting
-              strategies, structured verifiers, calculators, and lightweight policy selectors.
-            </p>
-
-            <p>
-              The project introduces and analyzes <strong>ScaleQA-Natural</strong>, a diagnostic
-              set of natural scale-conflict candidates. It studies when a model should keep
-              its original answer, switch to a larger-scale answer, switch to a smaller-scale
-              answer, or rely on unit and axis evidence. The main finding is that generating
-              a scaled alternative is often easier than selecting the correct scale regime.
+              On a 26,425-example diagnostic benchmark, referent enumeration recovered
+              <strong>20/22</strong> audited low-score focus-ambiguity false negatives,
+              versus <strong>0/22</strong> for answer self-consistency.
             </p>
 
             <p class="project-tags">
-              <strong>Topics:</strong> chart question answering, multimodal AI, numerical reliability,
-              scale inconsistency, LoRA adapters, policy selection
+              <strong>Topics:</strong> VQA, conditional multimodal inference, selective prediction, calibration
             </p>
 
             <p class="project-links">
-              <a href="https://openreview.net/forum?id=HGwCScxgE6" target="_blank" rel="noopener">
-                View on OpenReview
+              <a href="https://github.com/pzy54154631-hub/ambiguity-is-not-one-scalar" target="_blank" rel="noopener">
+                View project on GitHub
+              </a>
+            </p>
+          </div>
+
+          <div class="card project-card">
+            <strong>PW-OFPC: Precision-Weighted Object-File Predictive Coding</strong>
+
+            <p>
+              This project builds an uncertainty-aware abstract visual reasoning pipeline
+              that preserves object-file posteriors and compares answer candidates jointly
+              using predictive-coding residuals.
+            </p>
+
+            <p>
+              On public RAVEN, the inference ladder improved macro accuracy from
+              <strong>0.537 to 0.857</strong>. Controlled experiments separated
+              object-formation failures from residual and candidate-selection failures.
+            </p>
+
+            <p class="project-tags">
+              <strong>Topics:</strong> uncertainty-aware inference, object-centric reasoning, predictive coding, candidate comparison
+            </p>
+
+            <p class="project-links">
+              <a href="https://github.com/pzy54154631-hub/pw-ofpc" target="_blank" rel="noopener">
+                View project on GitHub
               </a>
             </p>
           </div>
@@ -356,10 +375,40 @@
         <h2 class="section-title">Manuscripts &amp; Writing</h2>
 
         <div class="section-body">
-          <div class="card">
+          <div class="card project-card">
+            <strong>Scale Is Not Symmetric: Directional Scale Reliability in Chart Question Answering</strong>
+
+            <p><em>Submitted manuscript, 2026.</em></p>
+
             <p>
-              I am interested in research writing in statistics, data science, and AI reliability.
-              I will add preprints, technical reports, and project pages here when they become available.
+              This work studies a reliability problem in chart question answering:
+              multimodal models may identify a numerically related value but report it
+              at the wrong scale, such as answering <em>0.61</em> when the chart question
+              requires <em>61</em>. It treats this behavior as a directional scale-regime
+              selection failure rather than a generic numerical mistake.
+            </p>
+
+            <p>
+              The manuscript introduces <strong>ScaleQA-Natural</strong>, a 520-example
+              audited diagnostic set for decimal/percent and unit-scale conflicts, and
+              evaluates prompting, directional LoRA adapters, verifiers, calculators,
+              likelihood scoring, and policy selectors.
+            </p>
+
+            <p>
+              A targeted adapter improved held-out ChartQA accuracy from
+              <strong>88.60% to 89.32%</strong> and recovered <strong>49.52%</strong>
+              of strict scale errors; broader diagnostics identified regime selection
+              as the main remaining bottleneck.
+            </p>
+
+            <p class="project-tags">
+              <strong>Topics:</strong> chart question answering, multimodal reliability, LoRA, policy selection
+            </p>
+
+            <p class="project-links">
+              <a href="https://openreview.net/forum?id=HGwCScxgE6" target="_blank" rel="noopener">View on OpenReview</a>
+              <a href="https://github.com/pzy54154631-hub/Scale-Is-Not-Symmetric" target="_blank" rel="noopener">View code on GitHub</a>
             </p>
           </div>
         </div>
