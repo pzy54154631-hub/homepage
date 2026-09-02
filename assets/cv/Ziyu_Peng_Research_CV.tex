@@ -1,0 +1,93 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.68in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+\definecolor{accent}{RGB}{25,62,92}
+\definecolor{linkblue}{RGB}{20,76,130}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=1.2pt,topsep=1.6pt,parsep=0pt,partopsep=0pt}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{2.5pt}
+
+\newcommand{\entry}[2]{\textbf{#1}\hfill\textit{#2}}
+\newcommand{\researchentry}[3]{%
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+{\textbf{#1}} & \textit{#2}\\[-1pt]
+\multicolumn{2}{@{}l@{}}{\small #3}
+\end{tabularx}\vspace{0.5pt}}
+
+\begin{document}
+
+\begin{center}
+    {\Huge\bfseries Ziyu Peng}\\[3pt]
+    \small
+    \href{mailto:Ziyu.PengSr@colorado.edu}{Ziyu.PengSr@colorado.edu}
+    \;|\;
+    \href{https://pzy54154631-hub.github.io/homepage/}{pzy54154631-hub.github.io/homepage}
+    \;|\;
+    \href{https://github.com/pzy54154631-hub}{github.com/pzy54154631-hub}
+\end{center}
+\vspace{-4pt}
+
+\section*{Education}
+\entry{University of Colorado Boulder}{2026--Present}\\
+Undergraduate Student, Statistics and Data Science\\
+\entry{Xi'an Jiaotong-Liverpool University (XJTLU)}{2025--2026}\\
+First-Year Undergraduate Study, \textit{Data Science and Big Data Technology}\\
+School of AI and Advanced Computing, XJTLU Entrepreneur College (Taicang)\\
+\textbf{GPA: 3.88/4.00} \;|\; Calculus I--III, Linear Algebra
+
+\section*{Research Interests}
+\small
+Mechanistic interpretability; reliable LLM/VLM reasoning; uncertainty-aware inference, calibration, and selective prediction.
+\normalsize
+
+\section*{Submitted Manuscript}
+\researchentry{\href{https://openreview.net/forum?id=HGwCScxgE6\#discussion}{\color{linkblue}Scale Is Not Symmetric: Directional Scale Reliability in Chart Question Answering}}{2026}{Multimodal inference reliability; chart question answering; policy selection}
+\begin{itemize}
+    \item Built \textbf{ScaleQA-Natural}, a 520-example audited diagnostic set for decimal/percent and unit-scale conflicts in chart QA.
+    \item Evaluated prompting, directional LoRA adapters, verifiers, calculators, likelihood scoring, and policy selectors to separate candidate generation from candidate selection.
+    \item A targeted adapter improved held-out ChartQA accuracy from \textbf{88.60\% to 89.32\%} and recovered \textbf{49.52\%} of strict scale errors; broader diagnostics identified regime selection as the main remaining bottleneck.
+\end{itemize}
+
+\section*{Selected Research Projects}
+\researchentry{Ambiguity Is Not One Scalar: Explicit Referents Improve VQA Routing}{2026}{Conditional multimodal inference; selective prediction; calibration}
+\begin{itemize}
+    \item Designed a two-stage VQA router over \textbf{ANSWER / CLARIFY / ABSTAIN}, using explicit referent enumeration for uncertain or focus-sensitive inputs.
+    \item On a 26,425-example diagnostic benchmark, referent enumeration recovered \textbf{20/22} low-score focus-ambiguity false negatives, versus \textbf{0/22} for answer self-consistency.
+\end{itemize}
+
+\researchentry{PW-OFPC: Precision-Weighted Object-File Predictive Coding}{2025--2026}{Uncertainty-aware inference; object-centric reasoning; candidate comparison}
+\begin{itemize}
+    \item Built an uncertainty-aware abstract visual reasoning pipeline that preserves object-file posteriors and compares answer candidates jointly using predictive-coding residuals.
+    \item On public RAVEN, the inference ladder improved macro accuracy from \textbf{0.537 to 0.857}; controlled experiments separated object-formation failures from residual and candidate-selection failures.
+\end{itemize}
+
+\section*{Honors \& Awards}
+\begin{itemize}
+    \item \textbf{CU Boulder Transfer Excellence Scholarship, 2026} -- \$12,000 (\$6,000/year), awarded to academically promising nonresident transfer students.
+    \item \textbf{XJTLU Academic Scholarship (University Academic Achievement Award), 2026/27} -- awarded for academic performance in 2025--26.
+    \item \textbf{Third Prize, XJTLU Biostatistics Competition, 2026} -- only first-year student among prize recipients.
+\end{itemize}
+
+\section*{Technical Skills}
+\small
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{1.6em}}X@{}}
+\textbf{\color{accent}Programming} & \textbf{\color{accent}Machine Learning} \\
+Python, R & PyTorch, Transformers, LLMs/VLMs, LoRA \\[3pt]
+\textbf{\color{accent}Tools} & \textbf{\color{accent}Methods} \\
+Linux, Git/GitHub, LaTeX & Calibration, selective prediction, inference-time routing, verification
+\end{tabularx}
+\normalsize
+
+\end{document}

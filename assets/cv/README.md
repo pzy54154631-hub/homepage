@@ -1,5 +1,10 @@
-把你的简历 PDF 放到这个目录里，然后把 `index.html` 中的 CV 链接改成对应文件路径即可。
+`Ziyu_Peng_Research_CV.pdf` is the CV linked from the homepage.
 
-示例：
+The editable LaTeX source is `Ziyu_Peng_Research_CV.tex`. Rebuild it from this directory with:
 
-- `assets/cv/your_cv.pdf`
+```bash
+latexmk -pdf Ziyu_Peng_Research_CV.tex
+latexmk -c Ziyu_Peng_Research_CV.tex
+```
+
+Keep the PDF filename unchanged so the homepage link remains valid.

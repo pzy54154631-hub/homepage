@@ -7,8 +7,8 @@
 
   <title>Ziyu Peng - Homepage</title>
 
-  <meta name="description" content="Personal academic homepage of Ziyu Peng, an undergraduate student in Statistics and Data Science at the University of Colorado Boulder.">
-  <meta name="keywords" content="Ziyu Peng, University of Colorado Boulder, Statistics and Data Science, statistics, data science, machine learning, artificial intelligence, chart question answering, multimodal AI, computational neuroscience">
+  <meta name="description" content="Academic homepage of Ziyu Peng, a CU Boulder undergraduate interested in reliable multimodal reasoning, interpretable AI, computational neuroscience, and foundation models.">
+  <meta name="keywords" content="Ziyu Peng, University of Colorado Boulder, Statistics and Data Science, mechanistic interpretability, computational neuroscience, foundation models, large language models, trustworthy AI, multimodal reasoning, visual question answering, uncertainty, calibration">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
@@ -186,23 +186,21 @@
           </p>
 
           <p>
-            My primary systems interest is in how large-scale ML models are trained and
-            deployed efficiently. I am especially interested in resource-efficient LLM
-            inference, serving frameworks for agentic and multimodal AI, and scalable
-            end-to-end ML pipelines.
+            My work sits at the intersection of <strong>reliable multimodal reasoning</strong> and
+            <strong>interpretable AI</strong>. Across visual question answering, chart reasoning, and
+            Raven-style abstract reasoning, I study how models identify referents, preserve uncertainty,
+            compare candidates, and decide when to answer, clarify, or abstain.
           </p>
 
           <p>
-            My current work on VQA routing and uncertainty-preserving visual reasoning provides
-            concrete workloads for these questions: different inputs may trigger different stages,
-            reuse intermediate context, or require additional candidate comparison. This motivates
-            problems in routing, scheduling, caching, and reliable serving.
+            My current projects use calibrated routing, structured visual representations, and
+            mechanism-focused diagnostics. My broader interests include mechanistic interpretability,
+            foundation models and ML systems, large-scale multimodal models, and computational neuroscience.
           </p>
 
           <p>
-            I am seeking undergraduate research opportunities in ML systems, particularly
-            resource-efficient LLM inference, end-to-end ML pipelines, and serving for
-            agentic or multimodal workloads.
+            I am open to undergraduate research opportunities involving reliable multimodal AI,
+            interpretability, or computational models of intelligence.
           </p>
 
           <p>
@@ -265,18 +263,24 @@
           <div class="card">
             <ul>
               <li>
-                <strong>Efficient AI systems.</strong>
-                I am interested in systems for training and deploying large-scale ML models, especially
-                resource-efficient LLM training and inference, serving frameworks for agentic and multimodal AI,
-                and scalable end-to-end ML pipelines. My routing and fusion work motivates systems questions around
-                conditional execution, dynamic resource demands, scheduling, caching, and reuse of intermediate context.
+                <strong>Multimodal and abstract visual reasoning.</strong>
+                VQA, referent-aware routing, object-centric representations, predictive coding, and candidate comparison.
               </li>
               <li>
-                <strong>Reliable multimodal reasoning.</strong>
-                I study how models identify referents, maintain structured visual representations, compare candidate
-                answers, and decide when to answer, clarify, or abstain. VQA, ChartQA, and abstract visual reasoning
-                provide concrete workloads for understanding how uncertainty, variable computation, and intermediate
-                representations should shape reliable AI systems.
+                <strong>Trustworthy inference.</strong>
+                Uncertainty-aware inference, calibration, selective prediction, verification, and mechanism-focused diagnostics.
+              </li>
+              <li>
+                <strong>Mechanistic interpretability.</strong>
+                Internal representations, attention and MLP mechanisms, and causal interventions for language and multimodal reasoning.
+              </li>
+              <li>
+                <strong>Foundation models and ML systems.</strong>
+                Large-scale model training, efficient inference, serving, and adaptation for language and multimodal models.
+              </li>
+              <li>
+                <strong>Computational neuroscience.</strong>
+                Predictive processing, representation, learning, and decision-making across natural and artificial intelligence.
               </li>
             </ul>
           </div>
@@ -304,10 +308,10 @@
             </p>
 
             <p>
-              From a systems perspective, the router creates variable execution paths:
-              some requests can answer immediately, while others trigger referent enumeration
-              or clarification. I am interested in how such workloads should be batched,
-              scheduled, and served efficiently.
+              The diagnostic separates referent uncertainty, disagreement across plausible
+              interpretations, and insufficient visual evidence. This makes it possible to ask
+              which specific failure mechanism produced a model's decision instead of treating
+              every error as generic low confidence.
             </p>
 
             <p class="project-tags">
@@ -337,9 +341,9 @@
             </p>
 
             <p>
-              The staged preservation and comparison of object-file posteriors also raises
-              systems questions about caching intermediate representations, coordinating
-              candidate evaluation, and managing resource use across inference stages.
+              Its oracle intervention ladder localizes failures across object formation,
+              posterior preservation and precision calibration, predictive residual construction,
+              and cross-option candidate comparison.
             </p>
 
             <p class="project-tags">
@@ -454,14 +458,11 @@
         <div class="section-body">
           <div class="skills-grid">
             <div class="card skill-group">
-              <div class="skill-heading">Programming &amp; Data</div>
+              <div class="skill-heading">Programming</div>
 
               <div class="skill-tags">
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">R</span>
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript</span>
               </div>
             </div>
 
@@ -470,34 +471,31 @@
 
               <div class="skill-tags">
                 <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">CNNs</span>
                 <span class="skill-tag">Transformers</span>
-                <span class="skill-tag">Large Language Models</span>
-                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">LLMs / VLMs</span>
+                <span class="skill-tag">LoRA</span>
               </div>
             </div>
 
             <div class="card skill-group">
-              <div class="skill-heading">Academic Tools</div>
+              <div class="skill-heading">Research Methods</div>
 
               <div class="skill-tags">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub</span>
-                <span class="skill-tag">LaTeX</span>
+                <span class="skill-tag">Calibration</span>
+                <span class="skill-tag">Selective Prediction</span>
+                <span class="skill-tag">Inference-time Routing</span>
+                <span class="skill-tag">Verification</span>
+                <span class="skill-tag">Controlled Interventions</span>
+              </div>
+            </div>
+
+            <div class="card skill-group">
+              <div class="skill-heading">Tools</div>
+
+              <div class="skill-tags">
                 <span class="skill-tag">Linux</span>
-              </div>
-            </div>
-
-            <div class="card skill-group">
-              <div class="skill-heading">Methods &amp; Topics</div>
-
-              <div class="skill-tags">
-                <span class="skill-tag">Statistics</span>
-                <span class="skill-tag">Data Science</span>
-                <span class="skill-tag">Multimodal AI</span>
-                <span class="skill-tag">Chart Question Answering</span>
-                <span class="skill-tag">AI Reliability</span>
-                <span class="skill-tag">Computational Neuroscience</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">LaTeX</span>
               </div>
             </div>
           </div>
