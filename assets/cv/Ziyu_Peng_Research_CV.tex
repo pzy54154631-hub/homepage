@@ -1,6 +1,6 @@
-\documentclass[11pt,letterpaper]{article}
+\documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.68in]{geometry}
+\usepackage[margin=0.60in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
@@ -11,83 +11,102 @@
 \usepackage{tabularx}
 \usepackage{array}
 
-\definecolor{accent}{RGB}{25,62,92}
-\definecolor{linkblue}{RGB}{20,76,130}
+% Content follows cv.html; keep both sources in sync when updating this CV.
+\definecolor{ink}{RGB}{37,36,32}
+\definecolor{muted}{RGB}{98,94,88}
+\definecolor{rulegray}{RGB}{206,200,190}
+\renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=1.3em,itemsep=1.2pt,topsep=1.6pt,parsep=0pt,partopsep=0pt}
-\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{1pt}\titlerule]
-\titlespacing*{\section}{0pt}{6pt}{2.5pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist[itemize]{leftmargin=1.25em,label=\textbullet,itemsep=2.5pt,topsep=4pt,parsep=0pt,partopsep=0pt}
+\titleformat{\section}
+  {\fontsize{9.5}{11.5}\selectfont\bfseries\color{ink}}
+  {}{0pt}{\MakeUppercase}
+  [\vspace{3pt}{\color{rulegray}\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{13pt}{7pt}
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Ziyu Peng},
+  pdfauthor={Ziyu Peng},
+  pdfsubject={Undergraduate research curriculum vitae}
+}
 
-\newcommand{\entry}[2]{\textbf{#1}\hfill\textit{#2}}
-\newcommand{\researchentry}[3]{%
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X r@{}}
-{\textbf{#1}} & \textit{#2}\\[-1pt]
-\multicolumn{2}{@{}l@{}}{\small #3}
-\end{tabularx}\vspace{0.5pt}}
+\newcommand{\entry}[2]{%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{12pt}}r@{}}
+    \textbf{#1} & {\fontsize{9.5}{11.5}\selectfont\color{muted}#2}
+  \end{tabularx}}
+\newcommand{\detail}[1]{%
+  {\fontsize{9.5}{11.8}\selectfont\color{muted}#1\par}}
+\newcommand{\projectgap}{\vspace{6pt}}
+\newcommand{\cvlink}[2]{\href{#1}{\underline{#2}}}
 
 \begin{document}
+\color{ink}
+\fontsize{10}{12.2}\selectfont
 
-\begin{center}
-    {\Huge\bfseries Ziyu Peng}\\[3pt]
-    \small
-    \href{mailto:Ziyu.PengSr@colorado.edu}{Ziyu.PengSr@colorado.edu}
-    \;|\;
-    \href{https://pzy54154631-hub.github.io/homepage/}{pzy54154631-hub.github.io/homepage}
-    \;|\;
-    \href{https://github.com/pzy54154631-hub}{github.com/pzy54154631-hub}
-\end{center}
-\vspace{-4pt}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+  {\rmfamily\fontsize{29}{32}\selectfont\bfseries Ziyu Peng}
+  & {\fontsize{9.5}{11.5}\selectfont\color{muted}Boulder, Colorado}
+\end{tabularx}
+\vspace{5pt}
+
+{\fontsize{9.5}{11.5}\selectfont
+Undergraduate Student \textperiodcentered{} Statistics \& Data Science \textperiodcentered{} University of Colorado Boulder\par}
+\vspace{5pt}
+{\fontsize{9.5}{11.5}\selectfont
+\cvlink{mailto:Ziyu.PengSr@colorado.edu}{Ziyu.PengSr@colorado.edu}
+\hspace{14pt}
+\cvlink{https://pzy54154631-hub.github.io/homepage/}{Academic homepage}
+\hspace{14pt}
+\cvlink{https://github.com/pzy54154631-hub}{GitHub}\par}
 
 \section*{Education}
-\entry{University of Colorado Boulder}{2026--Present}\\
-Undergraduate Student, Statistics and Data Science\\
-\entry{Xi'an Jiaotong-Liverpool University (XJTLU)}{2025--2026}\\
-First-Year Undergraduate Study, \textit{Data Science and Big Data Technology}\\
-School of AI and Advanced Computing, XJTLU Entrepreneur College (Taicang)\\
-\textbf{GPA: 3.88/4.00} \;|\; Calculus I--III, Linear Algebra
+\entry{University of Colorado Boulder}{2026--Present}
+\detail{B.S. in Statistics and Data Science, in progress}
+\vspace{6pt}
+\entry{Xi'an Jiaotong-Liverpool University}{2025--2026}
+\detail{First-year study in Data Science and Big Data Technology \textperiodcentered{} \textbf{GPA 3.88/4.00}}
 
-\section*{Research Interests}
-\small
-Mechanistic interpretability; reliable LLM/VLM reasoning; uncertainty-aware inference, calibration, and selective prediction.
-\normalsize
-
-\section*{Submitted Manuscript}
-\researchentry{\href{https://openreview.net/forum?id=HGwCScxgE6\#discussion}{\color{linkblue}Scale Is Not Symmetric: Directional Scale Reliability in Chart Question Answering}}{2026}{Multimodal inference reliability; chart question answering; policy selection}
+\section*{Research \& Technical Projects}
+\entry{Equity Return Prediction and Low-Turnover Stock Selection}{2026}
+\detail{2026 Shenzhen International FinTech Competition (FinTechathon) \textperiodcentered{} Data Analytics Track}
 \begin{itemize}
-    \item Built \textbf{ScaleQA-Natural}, a 520-example audited diagnostic set for decimal/percent and unit-scale conflicts in chart QA.
-    \item Evaluated prompting, directional LoRA adapters, verifiers, calculators, likelihood scoring, and policy selectors to separate candidate generation from candidate selection.
-    \item A targeted adapter improved held-out ChartQA accuracy from \textbf{88.60\% to 89.32\%} and recovered \textbf{49.52\%} of strict scale errors; broader diagnostics identified regime selection as the main remaining bottleneck.
+  \item Analyzed 7.9 million training observations from 4,650 A-share stocks; built 236 price-volume features and evaluated XGBoost and GRU models for cross-sectional return prediction.
+  \item Developed separate stock-selection and daily-ranking layers. In 2022--2024 \emph{development} validation, reduced Top-group Jaccard turnover from 0.76--0.80 to 0.02--0.04, with a trade-off in estimated excess return.
 \end{itemize}
 
-\section*{Selected Research Projects}
-\researchentry{Ambiguity Is Not One Scalar: Explicit Referents Improve VQA Routing}{2026}{Conditional multimodal inference; selective prediction; calibration}
+\projectgap
+\entry{Ambiguity Is Not One Scalar}{2026}
 \begin{itemize}
-    \item Designed a two-stage VQA router over \textbf{ANSWER / CLARIFY / ABSTAIN}, using explicit referent enumeration for uncertain or focus-sensitive inputs.
-    \item On a 26,425-example diagnostic benchmark, referent enumeration recovered \textbf{20/22} low-score focus-ambiguity false negatives, versus \textbf{0/22} for answer self-consistency.
+  \item Implemented a visual question-answering router that enumerates plausible referents before choosing answer, clarify, or abstain.
+  \item Evaluated a 26,425-example diagnostic benchmark; referent enumeration recovered 20 of 22 human-audited ambiguity misses versus 0 of 22 for an answer-consistency baseline. \cvlink{https://github.com/pzy54154631-hub/ambiguity-is-not-one-scalar}{Code and results}.
 \end{itemize}
 
-\researchentry{PW-OFPC: Precision-Weighted Object-File Predictive Coding}{2025--2026}{Uncertainty-aware inference; object-centric reasoning; candidate comparison}
+\projectgap
+\entry{PW-OFPC: Object-Centric Predictive Coding}{2025--2026}
 \begin{itemize}
-    \item Built an uncertainty-aware abstract visual reasoning pipeline that preserves object-file posteriors and compares answer candidates jointly using predictive-coding residuals.
-    \item On public RAVEN, the inference ladder improved macro accuracy from \textbf{0.537 to 0.857}; controlled experiments separated object-formation failures from residual and candidate-selection failures.
+  \item Developed an abstract visual-reasoning pipeline that retains uncertainty over object attributes and compares candidates using precision-weighted residuals.
+  \item Reported RAVEN macro accuracy of 0.857 for cross-option inference versus 0.537 for direct prompting; maintained scripts to reproduce archived evaluation tables. \cvlink{https://github.com/pzy54154631-hub/pw-ofpc}{Code and results}.
 \end{itemize}
 
-\section*{Honors \& Awards}
+\projectgap
+\entry{Corridor Wealth: Auditable AI Advisory Prototype}{2026}
 \begin{itemize}
-    \item \textbf{CU Boulder Transfer Excellence Scholarship, 2026} -- \$12,000 (\$6,000/year), awarded to academically promising nonresident transfer students.
-    \item \textbf{XJTLU Academic Scholarship (University Academic Achievement Award), 2026/27} -- awarded for academic performance in 2025--26.
-    \item \textbf{Third Prize, XJTLU Biostatistics Competition, 2026} -- only first-year student among prize recipients.
+  \item Built a synthetic-data financial advisory prototype with deterministic policy checks separate from model proposals and individually authorized simulated transactions. \cvlink{https://github.com/pzy54154631-hub/Shenzhen-Fintech-international-Project}{Project repository}.
 \end{itemize}
+
+\section*{Honors \& Recognition}
+\textbf{FinTechathon 2026} --- Data Analytics Track: Top 25 (top 10\%), semifinal in progress; separately participating in the International AI Track.\par
+\vspace{4pt}
+\textbf{CU Boulder Transfer Excellence Scholarship} --- \$12,000 total (2026).\par
+\vspace{4pt}
+\textbf{XJTLU Academic Scholarship} (2026/27); \textbf{Third Prize}, XJTLU Biostatistics Competition (2026).\par
 
 \section*{Technical Skills}
-\small
-\begin{tabularx}{\textwidth}{@{}X@{\hspace{1.6em}}X@{}}
-\textbf{\color{accent}Programming} & \textbf{\color{accent}Machine Learning} \\
-Python, R & PyTorch, Transformers, LLMs/VLMs, LoRA \\[3pt]
-\textbf{\color{accent}Tools} & \textbf{\color{accent}Methods} \\
-Linux, Git/GitHub, LaTeX & Calibration, selective prediction, inference-time routing, verification
-\end{tabularx}
-\normalsize
+\textbf{Programming and tools:} Python, R, PyTorch, XGBoost, Git/GitHub, Linux, LaTeX.\par
+\vspace{4pt}
+\textbf{Methods:} Feature engineering, statistical modeling, temporal validation, ablation studies, and reproducible evaluation.
 
 \end{document}

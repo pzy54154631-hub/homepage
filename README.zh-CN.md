@@ -2,7 +2,7 @@
 
 这是 **Ziyu Peng** 的个人学术主页源代码仓库。目前就读于 **University of Colorado Boulder（科罗拉多大学博尔德分校）**，学习统计与数据科学，此前就读于西交利物浦大学。
 
-[个人主页](https://pzy54154631-hub.github.io/homepage/) · [荣誉与奖项](https://pzy54154631-hub.github.io/homepage/#honors) · [个人简历](https://pzy54154631-hub.github.io/homepage/cv.html) · [English README](README.md)
+[个人主页](https://pzy54154631-hub.github.io/homepage/) · [荣誉与奖项](https://pzy54154631-hub.github.io/homepage/#honors) · [简历 PDF](https://pzy54154631-hub.github.io/homepage/assets/cv/Ziyu_Peng_Research_CV.pdf) · [网页版简历](https://pzy54154631-hub.github.io/homepage/cv.html) · [English README](README.md)
 
 ## 研究与项目
 
@@ -36,7 +36,7 @@ Top 25 / 前 10% 对应的是**数据分析赛道**；**国际 AI 赛道**的状
 
 - **部署来源：** `main` 分支的 `/ (root)`，GitHub Pages 设置为 **Deploy from a branch**。
 - **网页首页：** [`index.html`](index.html)，包含 `#honors` 荣誉部分。
-- **当前简历：** [`cv.html`](cv.html)，可通过页面上的 Print / Save as PDF 按钮打印或另存为 PDF。
+- **当前简历：** 可直接[下载 PDF](assets/cv/Ziyu_Peng_Research_CV.pdf)，或打开 [`cv.html`](cv.html) 在线查看。
 - **仓库首页说明：** `README.md` 和 `README.zh-CN.md`，用于 GitHub 仓库展示。
 
 网站修改需要提交并推送到 `main`，随后由 GitHub Pages 构建并发布该提交。部署进度可在 [Actions](https://github.com/pzy54154631-hub/homepage/actions) 中查看。核验时应确认成功的 Pages 运行对应目标 commit，再检查线上页面内容。
@@ -54,12 +54,12 @@ Top 25 / 前 10% 对应的是**数据分析赛道**；**国际 AI 赛道**的状
 ├── LICENSE.md
 └── assets/
     ├── img/            # 头像、网站图标及其他图片
-    ├── cv/             # 较早的 PDF 和 TeX 简历文件
+    ├── cv/             # 当前 PDF、可编辑的 TeX 源文件及生成说明
     ├── css/            # 保留的模板样式
     └── js/             # 保留的模板脚本
 ```
 
-更新荣誉信息时，请同步维护 `index.html`、`cv.html` 和两份 README，保持内容一致。
+更新荣誉信息时，请同步维护 `index.html`、`cv.html`、[简历源文件及 PDF](assets/cv/README.md) 和两份 README，保持内容一致。
 
 ## 来源与许可证
 

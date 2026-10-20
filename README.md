@@ -2,7 +2,7 @@
 
 Personal academic homepage of **Ziyu Peng**, an undergraduate student in Statistics and Data Science at the **University of Colorado Boulder**, previously at Xi'an Jiaotong-Liverpool University.
 
-[Homepage](https://pzy54154631-hub.github.io/homepage/) · [Honors & recognition](https://pzy54154631-hub.github.io/homepage/#honors) · [Curriculum vitae](https://pzy54154631-hub.github.io/homepage/cv.html) · [中文说明](README.zh-CN.md)
+[Homepage](https://pzy54154631-hub.github.io/homepage/) · [Honors & recognition](https://pzy54154631-hub.github.io/homepage/#honors) · [CV (PDF)](https://pzy54154631-hub.github.io/homepage/assets/cv/Ziyu_Peng_Research_CV.pdf) · [CV (web)](https://pzy54154631-hub.github.io/homepage/cv.html) · [中文说明](README.zh-CN.md)
 
 ## Research and selected work
 
@@ -36,7 +36,7 @@ This repository contains the source for [pzy54154631-hub.github.io/homepage](htt
 
 - **Deployment source:** `main` branch, `/ (root)`, using GitHub Pages' **Deploy from a branch** setting.
 - **Homepage:** [`index.html`](index.html), including the `#honors` section.
-- **Current CV:** [`cv.html`](cv.html), with a browser Print / Save as PDF button.
+- **Current CV:** [PDF download](assets/cv/Ziyu_Peng_Research_CV.pdf) and [`cv.html`](cv.html) for a web preview.
 - **Repository overview:** `README.md` and `README.zh-CN.md`, displayed on GitHub.
 
 Changes to the website must be committed and pushed to `main`. GitHub Pages then builds and publishes that commit; progress is available in [Actions](https://github.com/pzy54154631-hub/homepage/actions). To verify a release, check that the successful Pages run references the intended commit, then inspect the live page.
@@ -54,12 +54,12 @@ The site uses static HTML with styles embedded in `index.html` and `cv.html`; no
 ├── LICENSE.md
 └── assets/
     ├── img/            # Profile photo, favicon, and other images
-    ├── cv/             # Earlier PDF and TeX CV assets
+    ├── cv/             # Current PDF, editable TeX source, and build instructions
     ├── css/            # Retained template styles
     └── js/             # Retained template scripts
 ```
 
-When updating recognition details, keep `index.html`, `cv.html`, and both README files consistent.
+When updating recognition details, keep `index.html`, `cv.html`, the [CV source and PDF](assets/cv/README.md), and both README files consistent.
 
 ## Attribution and license
 
