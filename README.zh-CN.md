@@ -1,107 +1,66 @@
-<div align="center">
+# Ziyu Peng — 个人学术主页
 
-# Luka Homepage
+这是 **Ziyu Peng** 的个人学术主页源代码仓库。目前就读于 **University of Colorado Boulder（科罗拉多大学博尔德分校）**，学习统计与数据科学，此前就读于西交利物浦大学。
 
-### 一个温暖、极简、响应式的个人主页模板，适合研究者、学生、开发者和创作者。
+[个人主页](https://pzy54154631-hub.github.io/homepage/) · [荣誉与奖项](https://pzy54154631-hub.github.io/homepage/#honors) · [个人简历](https://pzy54154631-hub.github.io/homepage/cv.html) · [English README](README.md)
 
-[English README](README.md) · [在线预览](https://wzsyyh.github.io/luka-homepage-template/) · [使用此模板](https://github.com/wzsyyh/luka-homepage-template/generate)
+## 研究与项目
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-c2714f?style=flat-square)](https://wzsyyh.github.io/luka-homepage-template/)
-[![Template Ready](https://img.shields.io/badge/Template-Ready-3d3929?style=flat-square)](https://github.com/wzsyyh/luka-homepage-template/generate)
-[![Stack](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JS-e28a67?style=flat-square)](https://github.com/wzsyyh/luka-homepage-template)
-[![License](https://img.shields.io/badge/License-MIT-8c8577?style=flat-square)](./LICENSE.md)
+研究兴趣包括统计学习、模型评估和可靠的人工智能系统。主页展示的工作包括：
 
-</div>
+- 股票收益预测与低换手率选股。
+- 面向歧义的视觉问答。
+- 用于抽象视觉推理的精度加权对象文件预测编码。
+- Corridor Wealth：可审计的 AI 财富顾问原型。
 
-`Luka Homepage` 是从我自己的个人主页中抽离出来的一个独立模板版本。它追求温暖、克制、学术友好的视觉风格，同时保持纯静态、零构建、易部署。
+项目介绍及已有代码链接见主页的 [Selected work](https://pzy54154631-hub.github.io/homepage/#work) 部分。
 
-## 为什么用它
+我正在寻找由教师指导的本科科研机会。
 
-- 极简但不单调：更重视字体、配色、留白和阅读节奏。
-- 学术场景友好：不是通用作品集拼贴，而是为个人主页内容定制。
-- 零构建成本：直接部署到 GitHub Pages 即可。
-- 易于复用：改少量文案和资源就能快速上线。
-- 已做好移动端适配：桌面端和手机端都能直接使用。
+## 荣誉与奖项
 
-## 模板包含什么
+以下比赛进展截至 2026 年 10 月：
 
-| 模块 | 内容 |
+| 项目 | 内容 |
 | --- | --- |
-| 个人信息 | `About Me`、头像、邮箱、社交链接 |
-| 学术时间线 | `Education`、`Experience` |
-| 展示区 | `Projects`、`Publications`、`Awards` |
-| 体验细节 | 深色模式、轻量动画、响应式布局 |
-| 可替换资源 | 头像、机构 Logo、favicon、CV 链接 |
+| 2026 Shenzhen International FinTech Competition（FinTechathon） | **数据分析赛道：Top 25（前 10%），半决赛进行中。** 另参加 **International AI Track（国际 AI 赛道）**。 |
+| CU Boulder Transfer Excellence Scholarship | 2026 年 · 总额 12,000 美元 |
+| XJTLU Academic Scholarship | 2026/27 学年 |
+| XJTLU Biostatistics Competition 三等奖 | 2026 年 |
 
-## 快速开始
+Top 25 / 前 10% 对应的是**数据分析赛道**；**国际 AI 赛道**的状态为参赛。相同内容也已写入[主页源代码](index.html)和[简历源代码](cv.html)。
 
-### 1. 创建你自己的版本
+## 源代码与部署
 
-直接使用 GitHub 的 [Use This Template](https://github.com/wzsyyh/luka-homepage-template/generate)，或者把这个目录整体复制到一个新仓库中。
+本仓库是 [pzy54154631-hub.github.io/homepage](https://pzy54154631-hub.github.io/homepage/) 的源代码仓库。
 
-推荐仓库名：
+- **部署来源：** `main` 分支的 `/ (root)`，GitHub Pages 设置为 **Deploy from a branch**。
+- **网页首页：** [`index.html`](index.html)，包含 `#honors` 荣誉部分。
+- **当前简历：** [`cv.html`](cv.html)，可通过页面上的 Print / Save as PDF 按钮打印或另存为 PDF。
+- **仓库首页说明：** `README.md` 和 `README.zh-CN.md`，用于 GitHub 仓库展示。
 
-- `luka-homepage`
-- `luka-homepage-template`
-- `luka-academic-homepage`
+网站修改需要提交并推送到 `main`，随后由 GitHub Pages 构建并发布该提交。部署进度可在 [Actions](https://github.com/pzy54154631-hub/homepage/actions) 中查看。核验时应确认成功的 Pages 运行对应目标 commit，再检查线上页面内容。
 
-### 2. 修改内容
+网站采用静态 HTML，当前样式直接写在 `index.html` 和 `cv.html` 中，无需安装依赖或运行应用构建命令。
 
-通常只需要编辑这些文件：
-
-- `index.html`：页面结构与主要内容
-- `assets/css/theme-luka.css`：颜色、间距和布局
-- `assets/img/avatar.svg`：头像占位图
-- `assets/img/institution.svg`：机构 Logo 占位图
-
-### 3. 替换资源
-
-- 头像：替换 `assets/img/avatar.svg`
-- 机构 Logo：替换 `assets/img/institution.svg`
-- favicon：替换 `assets/img/favicon.svg`
-- 简历：修改 `index.html` 中的 `Download my CV` 链接
-
-### 4. 部署到 GitHub Pages
-
-1. 打开仓库 `Settings`
-2. 进入 `Pages`
-3. 选择 `Deploy from a branch`
-4. 选择 `main` 和 `/ (root)`
-5. 保存并等待部署完成
-
-## 目录结构
+## 文件说明
 
 ```text
 .
-├── index.html
-├── README.md
-├── README.zh-CN.md
+├── index.html          # 个人主页、研究项目、教育经历和荣誉
+├── cv.html             # 当前可打印简历
+├── README.md           # 英文仓库说明
+├── README.zh-CN.md      # 中文仓库说明
 ├── LICENSE.md
-└── assets
-    ├── css
-    │   ├── font_sans_serif.css
-    │   └── theme-luka.css
-    ├── cv
-    ├── img
-    └── js
-        └── scale.fix.js
+└── assets/
+    ├── img/            # 头像、网站图标及其他图片
+    ├── cv/             # 较早的 PDF 和 TeX 简历文件
+    ├── css/            # 保留的模板样式
+    └── js/             # 保留的模板脚本
 ```
 
-## 设计说明
+更新荣誉信息时，请同步维护 `index.html`、`cv.html` 和两份 README，保持内容一致。
 
-- 左侧栏默认保持顶部对齐，和原始个人主页布局一致。
-- 视觉语言更偏温暖、克制，而不是炫技式装饰。
-- 模板保留了足够的学术主页结构，同时又尽量降低了个性化门槛。
+## 来源与许可证
 
-## 署名与版权
-
-默认页脚包含两行：
-
-1. 你的站点版权信息
-2. `Luka Homepage Template by Yuheng Yang`
-
-如果你希望保留模板来源，建议保留第二行。
-
-## 许可证
-
-这个模板自带 `LICENSE.md`，可以直接作为独立仓库发布。
+最初基于 Yuheng Yang 的 [Luka Homepage Template](https://github.com/wzsyyh/luka-homepage-template)，现已定制为 Ziyu Peng 的个人学术主页。原有 MIT 许可证和版权声明见 [LICENSE.md](LICENSE.md)。

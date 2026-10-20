@@ -1,107 +1,66 @@
-<div align="center">
+# Ziyu Peng — Academic Homepage
 
-# Luka Homepage
+Personal academic homepage of **Ziyu Peng**, an undergraduate student in Statistics and Data Science at the **University of Colorado Boulder**, previously at Xi'an Jiaotong-Liverpool University.
 
-### A warm, minimal, responsive homepage template for researchers, students, builders, and creators.
+[Homepage](https://pzy54154631-hub.github.io/homepage/) · [Honors & recognition](https://pzy54154631-hub.github.io/homepage/#honors) · [Curriculum vitae](https://pzy54154631-hub.github.io/homepage/cv.html) · [中文说明](README.zh-CN.md)
 
-[中文说明](README.zh-CN.md) · [Live Demo](https://wzsyyh.github.io/luka-homepage-template/) · [Use This Template](https://github.com/wzsyyh/luka-homepage-template/generate)
+## Research and selected work
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-c2714f?style=flat-square)](https://wzsyyh.github.io/luka-homepage-template/)
-[![Template Ready](https://img.shields.io/badge/Template-Ready-3d3929?style=flat-square)](https://github.com/wzsyyh/luka-homepage-template/generate)
-[![Stack](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JS-e28a67?style=flat-square)](https://github.com/wzsyyh/luka-homepage-template)
-[![License](https://img.shields.io/badge/License-MIT-8c8577?style=flat-square)](./LICENSE.md)
+My interests include statistical learning, model evaluation, and reliable AI systems. The homepage presents work on:
 
-</div>
+- Equity return prediction and low-turnover stock selection.
+- Ambiguity-aware visual question answering.
+- Precision-weighted object-file predictive coding for abstract visual reasoning.
+- Corridor Wealth, an auditable AI wealth-advisory prototype.
 
-`Luka Homepage` is a standalone template version extracted from my own personal homepage. It is designed to feel warm, clean, and academic without adding any build tooling or framework overhead.
+See the [selected work section](https://pzy54154631-hub.github.io/homepage/#work) for project descriptions and available code.
 
-## Why This Template
+I am seeking undergraduate research opportunities under faculty supervision.
 
-- Minimal but not plain: clean typography, warm colors, and balanced spacing.
-- Academic-ready layout: built for homepage content, not generic portfolio blocks.
-- Static by default: deploy directly to GitHub Pages with zero build steps.
-- Easy to fork: replace a few text blocks and assets, then publish.
-- Mobile-friendly: desktop and phone layouts are already tuned.
+## Honors & recognition
 
-## What You Get
+Competition status as of October 2026:
 
-| Section | Included |
+| Recognition | Details |
 | --- | --- |
-| Personal intro | `About Me`, avatar, email, social links |
-| Academic timeline | `Education`, `Experience` |
-| Showcase | `Projects`, `Publications`, `Awards` |
-| UX details | Dark mode toggle, smooth entrance animation, responsive layout |
-| Replaceable assets | Avatar, institution logo, favicon, CV link |
+| 2026 Shenzhen International FinTech Competition (FinTechathon) | **Data Analytics Track: Top 25 (top 10%), semifinal in progress.** Separately participating in the **International AI Track**. |
+| CU Boulder Transfer Excellence Scholarship | 2026 · $12,000 total |
+| XJTLU Academic Scholarship | 2026/27 |
+| Third Prize, XJTLU Biostatistics Competition | 2026 |
 
-## Quick Start
+The Top 25 / top 10% result belongs to the **Data Analytics Track**. The **International AI Track** entry is listed as participation. These details are also in [the homepage source](index.html) and [the CV source](cv.html).
 
-### 1. Create your own copy
+## Source and deployment
 
-Use GitHub's [Use This Template](https://github.com/wzsyyh/luka-homepage-template/generate) button, or copy this folder into a new repository.
+This repository contains the source for [pzy54154631-hub.github.io/homepage](https://pzy54154631-hub.github.io/homepage/).
 
-Suggested repository names:
+- **Deployment source:** `main` branch, `/ (root)`, using GitHub Pages' **Deploy from a branch** setting.
+- **Homepage:** [`index.html`](index.html), including the `#honors` section.
+- **Current CV:** [`cv.html`](cv.html), with a browser Print / Save as PDF button.
+- **Repository overview:** `README.md` and `README.zh-CN.md`, displayed on GitHub.
 
-- `luka-homepage`
-- `luka-homepage-template`
-- `luka-academic-homepage`
+Changes to the website must be committed and pushed to `main`. GitHub Pages then builds and publishes that commit; progress is available in [Actions](https://github.com/pzy54154631-hub/homepage/actions). To verify a release, check that the successful Pages run references the intended commit, then inspect the live page.
 
-### 2. Customize the content
+The site uses static HTML with styles embedded in `index.html` and `cv.html`; no application build step or package installation is needed.
 
-You will mainly edit:
-
-- `index.html` for all main content
-- `assets/css/theme-luka.css` for colors, spacing, and layout
-- `assets/img/avatar.svg` for the profile image
-- `assets/img/institution.svg` for school or lab branding
-
-### 3. Replace your assets
-
-- Avatar: replace `assets/img/avatar.svg` with your own `png`, `jpg`, or `svg`
-- Institution logo: replace `assets/img/institution.svg`
-- Favicon: replace `assets/img/favicon.svg`
-- Resume: update the `Download my CV` link in `index.html`
-
-### 4. Deploy to GitHub Pages
-
-1. Open repository `Settings`
-2. Go to `Pages`
-3. Choose `Deploy from a branch`
-4. Select `main` and `/ (root)`
-5. Save and wait for deployment
-
-## Project Structure
+## Files
 
 ```text
 .
-├── index.html
-├── README.md
-├── README.zh-CN.md
+├── index.html          # Homepage, selected work, education, and honors
+├── cv.html             # Current printable CV
+├── README.md           # English repository overview
+├── README.zh-CN.md      # Chinese repository overview
 ├── LICENSE.md
-└── assets
-    ├── css
-    │   ├── font_sans_serif.css
-    │   └── theme-luka.css
-    ├── cv
-    ├── img
-    └── js
-        └── scale.fix.js
+└── assets/
+    ├── img/            # Profile photo, favicon, and other images
+    ├── cv/             # Earlier PDF and TeX CV assets
+    ├── css/            # Retained template styles
+    └── js/             # Retained template scripts
 ```
 
-## Design Notes
+When updating recognition details, keep `index.html`, `cv.html`, and both README files consistent.
 
-- The left sidebar stays top-aligned, matching the original personal homepage layout.
-- The visual language is intentionally warm and understated rather than highly decorative.
-- The template keeps just enough structure for academic use while remaining easy to personalize.
+## Attribution and license
 
-## Attribution
-
-The footer includes two lines by default:
-
-1. Your own site copyright
-2. `Luka Homepage Template by Yuheng Yang`
-
-If you want to preserve template attribution, keep the second line.
-
-## License
-
-This template includes its own `LICENSE.md`, so you can publish it as an independent repository immediately.
+Originally based on [Luka Homepage Template](https://github.com/wzsyyh/luka-homepage-template) by Yuheng Yang, subsequently customized for Ziyu Peng. See [LICENSE.md](LICENSE.md) for the existing MIT license and copyright notice.
