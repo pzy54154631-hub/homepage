@@ -29,7 +29,7 @@ jobs:
         run: |
           latexmk -xelatex -interaction=nonstopmode -halt-on-error Ziyu_Peng_Research_CV_ZH.tex
           test -s Ziyu_Peng_Research_CV_ZH.pdf
-          test "$(pdfinfo Ziyu_Peng_Research_CV_ZH.pdf | awk '/^Pages:/ {print $2}')" = "1"
+          grep -Eq 'Output written on .*xdv \(1 page,' Ziyu_Peng_Research_CV_ZH.log
 
       - name: Commit the generated PDF
         run: |
