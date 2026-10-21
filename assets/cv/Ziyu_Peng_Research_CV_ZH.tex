@@ -1,0 +1,116 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.60in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Chinese translation of Ziyu_Peng_Research_CV.tex.
+% Keep section order, facts, dates, metrics, links and styles in sync with the English source.
+\definecolor{ink}{RGB}{37,36,32}
+\definecolor{muted}{RGB}{98,94,88}
+\definecolor{rulegray}{RGB}{206,200,190}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist[itemize]{leftmargin=1.25em,label=\textbullet,itemsep=2.5pt,topsep=4pt,parsep=0pt,partopsep=0pt}
+\titleformat{\section}
+  {\fontsize{9.5}{11.5}\selectfont\bfseries\color{ink}}
+  {}{0pt}{\MakeUppercase}
+  [\vspace{3pt}{\color{rulegray}\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{13pt}{7pt}
+\hypersetup{
+  pdftitle={中文学术简历 -- Ziyu Peng},
+  pdfauthor={Ziyu Peng},
+  pdfsubject={本科生科研简历}
+}
+
+\newcommand{\entry}[2]{%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{12pt}}r@{}}
+    \textbf{#1} & {\fontsize{9.5}{11.5}\selectfont\color{muted}#2}
+  \end{tabularx}}
+\newcommand{\detail}[1]{%
+  {\fontsize{9.5}{11.8}\selectfont\color{muted}#1\par}}
+\newcommand{\projectgap}{\vspace{6pt}}
+\newcommand{\cvlink}[2]{\href{#1}{\underline{#2}}}
+
+\begin{document}
+\color{ink}
+\fontsize{10}{12.2}\selectfont
+
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+  {\rmfamily\fontsize{29}{32}\selectfont\bfseries Ziyu Peng}
+  & {\fontsize{9.5}{11.5}\selectfont\color{muted}美国科罗拉多州博尔德}
+\end{tabularx}
+\vspace{5pt}
+
+{\fontsize{9.5}{11.5}\selectfont
+本科生 \textperiodcentered{} 统计与数据科学 \textperiodcentered{} 科罗拉多大学博尔德分校\par}
+\vspace{5pt}
+{\fontsize{9.5}{11.5}\selectfont
+\cvlink{mailto:Ziyu.PengSr@colorado.edu}{Ziyu.PengSr@colorado.edu}
+\hspace{14pt}
+\cvlink{https://pzy54154631-hub.github.io/homepage/}{学术主页}
+\hspace{14pt}
+\cvlink{https://github.com/pzy54154631-hub}{GitHub}\par}
+
+\section*{教育经历}
+\entry{科罗拉多大学博尔德分校}{2026--至今}
+\detail{统计与数据科学理学学士（在读）}
+\vspace{6pt}
+\entry{西交利物浦大学}{2025--2026}
+\detail{数据科学与大数据技术专业一年级学习经历 \textperiodcentered{} \textbf{GPA 3.88/4.00}}
+
+\section*{科研与技术项目}
+\entry{股票收益率预测与低换手率选股}{2026}
+\detail{2026年深圳国际金融科技大赛（FinTechathon）\textperiodcentered{} 数据分析赛道}
+\begin{itemize}
+  \item 分析来自4,650只A股的790万条训练样本；构建236项量价特征，并评估XGBoost与GRU模型在横截面收益率预测中的表现。
+  \item 设计独立的选股层和每日排序层。在2022--2024年\emph{开发阶段}验证中，将Top组Jaccard换手指标从0.76--0.80降至0.02--0.04，但估计超额收益有所权衡。
+\end{itemize}
+
+\projectgap
+\entry{歧义并非单一标量（Ambiguity Is Not One Scalar）}{2026}
+\begin{itemize}
+  \item 实现视觉问答路由机制，先枚举可能的指代对象，再决定直接回答、请求澄清或选择不作答。
+  \item 在包含26,425个样本的诊断基准上进行评估；在人工核查的22个歧义漏检案例中，指代枚举方法找回20个，而答案一致性基线找回0个。\cvlink{https://github.com/pzy54154631-hub/ambiguity-is-not-one-scalar}{代码与结果}。
+\end{itemize}
+
+\projectgap
+\entry{PW-OFPC：以对象为中心的预测编码}{2025--2026}
+\begin{itemize}
+  \item 构建抽象视觉推理流程，保留对象属性的不确定性，并利用精度加权残差比较候选答案。
+  \item 报告了RAVEN基准上跨选项推断的宏平均准确率0.857，相比之下直接提示基线为0.537；维护了可复现归档评估表格的脚本。\cvlink{https://github.com/pzy54154631-hub/pw-ofpc}{代码与结果}。
+\end{itemize}
+
+\projectgap
+\entry{Corridor Wealth：可审计的AI财富顾问原型}{2026}
+\begin{itemize}
+  \item 构建基于合成数据的金融顾问原型，将确定性的策略检查与模型建议分离，并要求每笔模拟交易获得单独授权。\cvlink{https://github.com/pzy54154631-hub/Shenzhen-Fintech-international-Project}{项目仓库}。
+\end{itemize}
+
+\section*{荣誉与奖励}
+\textbf{FinTechathon 2026} --- 数据分析赛道前25名（前10\%），半决赛进行中；另参加国际AI赛道。\par
+\vspace{4pt}
+\textbf{科罗拉多大学博尔德分校转学卓越奖学金} --- 总额\$12,000（2026年）。\par
+\vspace{4pt}
+\textbf{西交利物浦大学学业奖学金}（2026/27）；\textbf{三等奖}，西交利物浦大学生物统计竞赛（2026年）。\par
+
+\section*{技术技能}
+\textbf{编程与工具：} Python、R、PyTorch、XGBoost、Git/GitHub、Linux、LaTeX。\par
+\vspace{4pt}
+\textbf{研究方法：} 特征工程、统计建模、时间维度验证、消融研究及可复现评估。
+
+\end{document}
