@@ -1,0 +1,42 @@
+name: Build Chinese CV PDF
+
+on:
+  push:
+    paths:
+      - "assets/cv/Ziyu_Peng_Research_CV_ZH.tex"
+      - ".github/workflows/build-zh-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install XeLaTeX, CJK support and fonts
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+            latexmk texlive-xetex texlive-latex-extra texlive-lang-chinese \
+            texlive-fonts-recommended lmodern fonts-noto-cjk
+
+      - name: Build Chinese research CV
+        working-directory: assets/cv
+        run: |
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error Ziyu_Peng_Research_CV_ZH.tex
+          test -s Ziyu_Peng_Research_CV_ZH.pdf
+          test "$(pdfinfo Ziyu_Peng_Research_CV_ZH.pdf | awk '/^Pages:/ {print $2}')" = "1"
+
+      - name: Commit the generated PDF
+        run: |
+          git add assets/cv/Ziyu_Peng_Research_CV_ZH.pdf
+          if ! git diff --cached --quiet; then
+            git -c user.name="github-actions[bot]" \
+                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit -m "Build downloadable Chinese CV PDF"
+            git push
+          fi
